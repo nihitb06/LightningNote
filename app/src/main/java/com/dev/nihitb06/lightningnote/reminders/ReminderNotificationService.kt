@@ -179,7 +179,7 @@ class ReminderNotificationService : Service() {
 
     companion object {
         const val CHANNEL_ID = "NotificationLightningNote"
-        private const val NAME = "LightningNoteNotifications"
+        const val NAME = "LightningNoteNotifications"
         private const val ACTION_ONE = "Dismiss"
         private const val ACTION_TWO = "Update Note"
         private const val REQUEST_CODE = 201

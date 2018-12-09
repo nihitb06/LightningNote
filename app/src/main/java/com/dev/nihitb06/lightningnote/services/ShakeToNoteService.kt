@@ -1,16 +1,20 @@
 package com.dev.nihitb06.lightningnote.services
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.app.PendingIntent
 import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.hardware.Sensor
 import android.hardware.SensorManager
+import android.os.Build
 import android.os.IBinder
 import android.support.v4.app.NotificationCompat
 import com.dev.nihitb06.lightningnote.MainActivity
 import com.dev.nihitb06.lightningnote.MainActivity.Companion.ADD_NOTE_BOOLEAN
 import com.dev.nihitb06.lightningnote.R
+import com.dev.nihitb06.lightningnote.reminders.ReminderNotificationService
 import com.dev.nihitb06.lightningnote.reminders.ReminderNotificationService.Companion.CHANNEL_ID
 
 class ShakeToNoteService : Service() {
@@ -39,6 +43,11 @@ class ShakeToNoteService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         sensorManager.registerListener(shakeListener, accelerometer, SensorManager.SENSOR_DELAY_GAME)
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            (getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager).createNotificationChannel(
+                    NotificationChannel(CHANNEL_ID, ReminderNotificationService.NAME, NotificationManager.IMPORTANCE_MIN)
+            )
+        }
         startForeground(FOREGROUND_NOTIFICATION_ID, buildNotification())
         return START_NOT_STICKY
     }
@@ -49,7 +58,11 @@ class ShakeToNoteService : Service() {
     }
 
     private fun openActivityForNoteAddition() {
-        startActivity(Intent(this, MainActivity::class.java).putExtra(ADD_NOTE_BOOLEAN, true))
+        startActivity(
+                Intent(this, MainActivity::class.java)
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        .putExtra(ADD_NOTE_BOOLEAN, true)
+        )
     }
 
     private fun buildNotification() = NotificationCompat.Builder(this, CHANNEL_ID)

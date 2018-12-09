@@ -10,6 +10,7 @@ import android.os.Build
 import android.os.CountDownTimer
 import android.os.Handler
 import android.os.IBinder
+import android.provider.Settings
 import android.view.*
 import android.widget.EditText
 import com.dev.nihitb06.lightningnote.R
@@ -115,7 +116,11 @@ class FloatingWidgetService : Service() {
         removeParams.gravity = Gravity.TOP or Gravity.START
 
         removeFloatingWidgetView.visibility = View.GONE
-        windowManager.addView(removeFloatingWidgetView, removeParams)
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+            if(Settings.canDrawOverlays(this))
+                windowManager.addView(removeFloatingWidgetView, removeParams)
+        else
+            windowManager.addView(removeFloatingWidgetView, removeParams)
 
         return removeFloatingWidgetView.findViewById(R.id.removeFloatingWidget)
     }
