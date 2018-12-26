@@ -10,6 +10,8 @@ The App also aims to implement a *Floating Note Helper* for phones without the a
 
 <a href='https://play.google.com/store/apps/details?id=com.dev.nihitb06.lightningnote&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height="90" /></a>
 
+**Important!!** Due to loss of Keystore, Lightning Note can no longer be maintained on Google Playstore. I will strive to re-publish the app at the earliest possible.
+
 ## Features
 
 Ever found yourself needing to urgently jot something and finding your stupid smartphone hell bent on hiding your notepad ?? Ever felt like life would be so much easier if you didn't have to hunt through your app drawer for apps ? Well, Your wait is Over!! Presenting Lightning Note, a lightweight solution to your note making problems.
