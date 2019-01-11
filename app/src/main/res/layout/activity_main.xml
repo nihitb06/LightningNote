@@ -5,7 +5,7 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dev.nihitb06.lightningnote.MainActivity">
+    tools:context="com.dev.nihitb06.newlightningnote.MainActivity">
 
     <LinearLayout
         android:orientation="vertical"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dev.nihitb06.lightningnote">
+    package="com.dev.nihitb06.newlightningnote">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -26,7 +26,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SplashActivity"
+            android:name="com.dev.nihitb06.newlightningnote.SplashActivity"
             android:theme="@style/AppTheme.SplashLayout">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.dev.nihitb06.newlightningnote.MainActivity"
             android:configChanges="keyboard|orientation"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -43,11 +43,11 @@
             android:windowSoftInputMode="adjustPan" />
 
         <service
-            android:name=".reminders.ReminderNotificationService"
+            android:name="com.dev.nihitb06.newlightningnote.reminders.ReminderNotificationService"
             android:enabled="true"
             android:exported="false" />
         <service
-            android:name=".reminders.ManageNotificationActionService"
+            android:name="com.dev.nihitb06.newlightningnote.reminders.ManageNotificationActionService"
             android:enabled="true"
             android:exported="false" />
 
@@ -56,7 +56,7 @@
             android:value=".search.SearchActivity" />
 
         <activity
-            android:name=".search.SearchActivity"
+            android:name="com.dev.nihitb06.newlightningnote.search.SearchActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -68,12 +68,12 @@
         </activity>
 
         <provider
-            android:name=".search.RecentSuggestionProvider"
-            android:authorities="com.dev.nihitb06.lightningnote.search.RecentSuggestionProvider"
+            android:name="com.dev.nihitb06.newlightningnote.search.RecentSuggestionProvider"
+            android:authorities="com.dev.nihitb06.newlightningnote.search.RecentSuggestionProvider"
             android:exported="false" />
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.dev.nihitb06.lightningnote.FileProvider"
+            android:authorities="com.dev.nihitb06.newlightningnote.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -82,20 +82,20 @@
         </provider>
 
         <activity
-            android:name=".attachment.AttachmentDetailsActivity"
+            android:name="com.dev.nihitb06.newlightningnote.attachment.AttachmentDetailsActivity"
             android:theme="@style/AppTheme.Black" />
 
         <service
-            android:name=".services.ShakeToNoteService"
+            android:name="com.dev.nihitb06.newlightningnote.services.ShakeToNoteService"
             android:enabled="true"
             android:exported="false" />
         <service
-            android:name=".services.FloatingWidgetService"
+            android:name="com.dev.nihitb06.newlightningnote.services.FloatingWidgetService"
             android:enabled="true"
             android:exported="false" />
 
         <activity
-            android:name=".services.SelectToNoteActivity"
+            android:name="com.dev.nihitb06.newlightningnote.services.SelectToNoteActivity"
             android:label="@string/save_select">
             <intent-filter>
                 <action android:name="android.intent.action.PROCESS_TEXT" />
@@ -106,7 +106,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".widget.ViewNoteWidget">
+        <receiver android:name="com.dev.nihitb06.newlightningnote.widget.ViewNoteWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -116,13 +116,13 @@
                 android:resource="@xml/view_note_widget_info" />
         </receiver>
 
-        <activity android:name=".widget.ViewNoteWidgetConfigureActivity">
+        <activity android:name="com.dev.nihitb06.newlightningnote.widget.ViewNoteWidgetConfigureActivity">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".aboutapp.AboutAppActivity"
+            android:name="com.dev.nihitb06.newlightningnote.aboutapp.AboutAppActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
@@ -135,7 +135,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".apptour.AppTourActivity"
+            android:name="com.dev.nihitb06.newlightningnote.apptour.AppTourActivity"
             android:theme="@style/AppTheme.Fullscreen" />
     </application>
 

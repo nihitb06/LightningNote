@@ -4,7 +4,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dev.nihitb06.lightningnote.notes.NotesFragment">
+    tools:context="com.dev.nihitb06.newlightningnote.notes.NotesFragment">
 
     <include layout="@layout/layout_empty_list"
         android:id="@+id/listEmpty"

@@ -8,9 +8,7 @@ Lightning Note aims to be a *lightweight* but still *powerful*, *open-source* no
 The primary purpose of this application was to be a different sort of Notepad, one that *comes to the user*. So the user just has to **shake the phone twice** and the app will open itself.
 The App also aims to implement a *Floating Note Helper* for phones without the accelerometer installed for detecting shaking action.
 
-<a href='https://play.google.com/store/apps/details?id=com.dev.nihitb06.lightningnote&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height="90" /></a>
-
-**Important!!** Due to loss of Keystore, Lightning Note can no longer be maintained on Google Playstore. I will strive to re-publish the app at the earliest possible.
+<a href='https://play.google.com/store/apps/details?id=com.dev.nihitb06.newlightningnote&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height="90" /></a>
 
 ## Features
 
